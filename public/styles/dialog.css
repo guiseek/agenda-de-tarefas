@@ -1,0 +1,45 @@
+dialog {
+  position: fixed;
+  top: 50%;
+  padding: 0;
+  transform: translateY(-50%);
+  width: 600px;
+  max-width: 600px;
+  border-radius: 6px;
+  border: 0;
+}
+
+dialog > section {
+  margin: var(--default-block-margin);
+}
+
+dialog button:hover {
+  cursor: pointer;
+}
+
+dialog header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+dialog ol {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+dialog ol li::marker {
+  font-weight: bold;
+}
+
+dialog footer {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+  justify-content: flex-end;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.9);
+}
