@@ -12,12 +12,12 @@ dialog {
 
 dialog > header,
 dialog > footer {
-  height: 100px;
+  height: 60px;
 }
 
 dialog > section {
-  max-height: calc(100% - 200px);
-  height: calc(100% - 200px);
+  max-height: calc(100% - 120px);
+  height: calc(100% - 120px);
   overflow: auto;
 }
 
