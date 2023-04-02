@@ -68,8 +68,8 @@ Salve os dados do formulário para que seja possível navegar entre os dias usan
 
 ### Dicas
 
-Para esta missao, evite adicionar complexidades desnecessárias, não recomendo o uso de `ctrl+c` e `ctrl+v` pois o problema exige o acrescimo de poucas linhas de código, entenda o problema antes de codificar.
+Para esta missão, evite adicionar complexidades desnecessárias, não recomendo o uso de `ctrl+c` e `ctrl+v` pois o problema exige o acréscimo de poucas linhas de código, entenda o problema antes de codificar.
 
-Descubra quais os métodos da [`Web Storage API`](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage) devem ser utilizados e então onde devem ser adicionados.
+Descubra quais os métodos da [`Web Storage API`](https://developer.mozilla.org/pt-BR/docs/Web/API/Storage) devem ser utilizados e onde devem ser adicionados.
 
-Entenda qual chave você pode usar no momento em que for armazenar os dados para que fique simples recuperá-los com a informação disponível na seleção do calendário.
+Entenda qual chave você pode utilizar como índice no momento em que for armazenar os dados para que fique simples recuperá-los com a informação disponível na seleção do calendário.
