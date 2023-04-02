@@ -44,7 +44,7 @@ Salve os dados do formulário para que seja possível navegar entre os dias usan
 
 
 ### Resultado esperado
-1. O app deve conseguir criar tarefas usando o formulário e armazena-las localmente, sendo que mesmo seja feito atualização da página, as tarefas permaneçam salvas.
+1. O app deve conseguir criar tarefas usando o formulário e armazena-las localmente, sendo que mesmo atualizando a página, as tarefas permaneçam salvas.
 
 1. O app deve conseguir listar tarefas armazenadas abaixo do calendário
 
