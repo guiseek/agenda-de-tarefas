@@ -50,6 +50,10 @@ main {
   width: var(--default-container-width);
 }
 
+pre {
+  color: var(--text-primary-color);
+}
+
 @media screen and (max-width: 480px) {
   main {
     flex-direction: column;
@@ -67,8 +71,17 @@ footer {
   background-color: var(--dark-primary-color);
 }
 
-main > section {
+main > nav {
   flex: 1;
+}
+main > aside {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  button {
+    cursor: help;
+  }
 }
 
 hr {

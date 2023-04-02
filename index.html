@@ -14,7 +14,7 @@
       <h1>Calendário de tarefas</h1>
     </header>
     <main>
-      <section>
+      <nav>
         <type-calendar data-lang="pt-br"></type-calendar>
 
         <hr />
@@ -22,7 +22,7 @@
         <!-- Lista de tarefas -->
 
         <!-- Fim da lista de tarefas -->
-      </section>
+      </nav>
       <aside>
         <fieldset>
           <legend>Tarefa</legend>
@@ -52,7 +52,7 @@
             </section>
             <section>
               <label for="date">Data</label>
-              <input id="date" type="date" name="date" required />
+              <input id="date" type="date" name="date" onclick="this.showPicker()" required />
               <output>Obrigatório</output>
             </section>
             <section>
@@ -65,9 +65,17 @@
             <button type="submit">Enviar</button>
           </form>
         </fieldset>
+
+        <section>
+          <button onclick="document.querySelector('dialog').showModal()">
+            Abrir instruções
+          </button>
+        </section>
       </aside>
     </main>
-    <footer>&copy; 2021</footer>
+    <footer>
+      <p>&copy; 2021</p>
+    </footer>
 
     <dialog>
       <header>
@@ -123,7 +131,7 @@
             href="https://developer.mozilla.org/pt-BR/docs/Web/API/Storage"
             target="_blank"
           >
-            <code>Web Storage API</code>
+            Web Storage API
           </a>
           devem ser utilizados e então onde devem ser adicionados.
         </p>
@@ -132,21 +140,6 @@
           dados para que fique simples recuperá-los com a informação disponível
           na seleção do calendário.
         </p>
-        <p>Arquivos que precisará trabalhar</p>
-        <ul>
-          <li>
-            <code>index.html</code>
-          </li>
-          <li>
-            <code>src/main.ts</code>
-          </li>
-          <li>
-            <code>src/utilities/set-tasks.ts</code>
-          </li>
-          <li>
-            <code>src/utilities/get-tasks.ts</code>
-          </li>
-        </ul>
 
         <h3>Exemplo para referência</h3>
         <a
@@ -155,6 +148,32 @@
         >
           MDN - Web Storage API
         </a>
+
+        <h3>Arquivos úteis</h3>
+        <pre>
+📦
+├───📂 src
+│   ├──📜 main.ts
+│   └──📜 style.scss
+│
+├─────📂 usecases
+│     ├──📜 get-tasks.ts
+│     └──📜 set-tasks.ts
+│
+├─📜 index.html
+</pre
+        >
+
+        <h3>⚠️ Importante ⚠️</h3>
+        <p>
+          Não se esqueça de abrir o console do navegador durante o
+          desenvolvimento!
+        </p>
+        <p>
+          Para abri-lo, clique com o botão direito do mouse sobre a página e vá
+          em <strong>Inspecionar</strong> (última opção), em seguida selecione a
+          aba <strong>Console</strong>.
+        </p>
       </section>
 
       <footer>
