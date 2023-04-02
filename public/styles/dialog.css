@@ -10,6 +10,10 @@ dialog {
   flex-direction: column;
 }
 
+dialog:not([open]) {
+  display: none;
+}
+
 dialog > header,
 dialog > footer {
   height: 60px;
