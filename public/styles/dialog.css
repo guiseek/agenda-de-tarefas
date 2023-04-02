@@ -4,7 +4,21 @@ dialog {
   width: 600px;
   max-width: 600px;
   border-radius: 6px;
+  max-height: 80vh;
   border: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+dialog > header,
+dialog > footer {
+  height: 100px;
+}
+
+dialog > section {
+  max-height: calc(100% - 200px);
+  height: calc(100% - 200px);
+  overflow: auto;
 }
 
 dialog > section {
