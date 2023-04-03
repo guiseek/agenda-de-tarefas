@@ -43,14 +43,14 @@ Salve os dados do formulário para que seja possível navegar entre os dias usan
 
 1. No arquivo `index.html`, escolha tags HTML que represente [semanticamente](https://seek.surge.sh/posts/semantica-dos-elementos-html/) as informações da interface `TaskEntity`.
 
-```ts
+   ```ts
    interface TaskItem {
      subject: string   // Assunto
      person: string    // Pessoa
      date: string      // Data
      terms: string     // Termos
    }
-```
+   ```
 
    Pense em uma tag para cada propriedade da interface (a propriedade `terms` não é obrigatória) e pode ficar de fora caso queira. Adicione as tags escolhidas dentro do elemento `<template>` que já existe neste documento.
 
