@@ -23,11 +23,7 @@
 
         <section></section>
 
-        <template id="task-item">
-          <!-- <h3></h3>
-          <p></p>
-          <time></time> -->
-        </template>
+        <template id="task-item"> </template>
 
         <!-- Fim da lista de tarefas -->
       </nav>
@@ -100,8 +96,8 @@
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            height="24px"
             viewBox="0 0 24 24"
+            height="24px"
             width="24px"
             fill="#000000"
           >
@@ -118,6 +114,18 @@
         dias usando o calendário, permitindo listar apenas as tarefas do dia
         selecionado.
 
+        <blockquote>
+          <h3 id="important">⚠️ Importante ⚠️</h3>
+          <p>
+            Não se esqueça de abrir o console do navegador durante o
+            desenvolvimento!
+          </p>
+          <p>
+            Para abri-lo, clique com o botão direito do mouse sobre a página e
+            vá em <strong>Inspecionar</strong> (última opção), em seguida
+            selecione a aba <strong>Console</strong>.
+          </p>
+        </blockquote>
         <ol>
           <li>
             <p>
@@ -178,6 +186,30 @@
             documento. Use <code>template.content.cloneNode(true)</code> para
             clonar novos itens do template.
           </li>
+          <li>
+            <p>
+              Agora que temos a função que preenche os itens e os adiciona no
+              documento, vamos separa-la pra que possa ser reuutilizada em
+              outros momentos.
+            </p>
+            <p>
+              Selecione o escopo da função criada para preencher e adicionar ao
+              documento, isso irá fazer com que apareça uma lampada na esquerda
+              superior da área selecionada. Se apareceu, clique nela e depois
+              clique em "Extract to function in module scope". Dê o nome dela de
+              <code>listTasksByDate</code>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Escreva uma função com o nome <code>removeChildren</code>, ela
+              deve receber como parâmetro um elemento HTML e sua
+              responsabilidade é remover todos os elementos filhos que o
+              elemento fornecido tiver. Uma sugestão é usar um
+              <code>for</code> utilizando como fonte de iteração a propriedade
+              <code>children</code> do elemento recebido.
+            </p>
+          </li>
         </ol>
 
         <h3>Dicas</h3>
@@ -197,6 +229,7 @@
           </a>
           devem ser utilizados e então onde devem ser adicionados.
         </p>
+
         <p>
           Entenda qual chave você pode usar no momento em que for armazenar os
           dados para que fique simples recuperá-los com a informação disponível
@@ -225,17 +258,6 @@
 ├─📜 index.html
 </pre
         >
-
-        <h3 id="important">⚠️ Importante ⚠️</h3>
-        <p>
-          Não se esqueça de abrir o console do navegador durante o
-          desenvolvimento!
-        </p>
-        <p>
-          Para abri-lo, clique com o botão direito do mouse sobre a página e vá
-          em <strong>Inspecionar</strong> (última opção), em seguida selecione a
-          aba <strong>Console</strong>.
-        </p>
       </section>
 
       <footer>

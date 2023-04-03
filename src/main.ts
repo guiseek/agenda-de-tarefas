@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /* Envia para armazenar */
     setTasksByDate(task)
 
-    // listTasksByDate(task.date, template, section)
+    /* listTasksByDate */
   }
 
   /* Calendário */
@@ -43,14 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
     com a data do dia selecionado */
     inputDate.value = date
 
-    // removeChildren(section)
+    /* removeChildren */
 
-    /* Busca lista de tarefas */
-    // const tasks = listTasksByDate(date, template, section)
+    /* listTasksByDate */
   })
 
-  // const date = formatDate(new Date())
-  // listTasksByDate(date, template, section)
+  /* listTasksByDate */
 
   /* Quando o campo de data é alterado,
     fazemos a alteração no calendário */
@@ -60,29 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
-// function removeChildren(section: HTMLElement) {
-//   for (const child of section.children) {
-//     child.remove()
-//   }
-// }
+/* function removeChildren */
 
-// function listTasksByDate(
-//   date: string,
-//   template: HTMLTemplateElement,
-//   section: HTMLElement
-// ) {
-//   const tasks = getTasksByDate(date)
-//   tasks.forEach((task) => {
-//     const fragment = template.content.cloneNode(true) as DocumentFragment
-
-//     const h3 = fragment.querySelector('h3')
-//     const p = fragment.querySelector('p')
-//     const time = fragment.querySelector('time')
-//     h3.innerText = task.subject
-//     p.innerText = task.person
-//     time.innerText = task.date
-
-//     section.appendChild(fragment)
-//   })
-//   return tasks
-// }
+/* function listTasksByDate */

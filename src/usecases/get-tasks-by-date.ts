@@ -5,7 +5,7 @@
  * @param date utilize date como chave
  */
 export function getTasksByDate(date: string): TaskItem[] {
-  const tasks = localStorage.getItem(date)
+  const tasks = `[]`
 
   return tasks ? JSON.parse(tasks) : []
 }

@@ -10,5 +10,5 @@ export function setTasksByDate(task: TaskItem) {
   const tasks = getTasksByDate(task.date)
   tasks.push(task)
 
-  localStorage.setItem(task.date, JSON.stringify(tasks))
+  JSON.stringify(tasks)
 }

@@ -6,6 +6,7 @@
   --light-primary-color: #4043ed50;
   --text-primary-color: #ffffff;
   --accent-color: #00bcd4;
+  --alert-color: rgb(255 235 0 / 18%);
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
   --divider-color: #bdbdbd;
@@ -51,6 +52,12 @@ main {
 
 pre {
   color: var(--text-primary-color);
+}
+
+blockquote {
+  margin: 16px 0;
+  padding: 2px 16px 16px;
+  background-color: var(--alert-color);
 }
 
 @media screen and (max-width: 480px) {
