@@ -1,6 +1,5 @@
 button {
-  padding: var(--default-element-padding)
-    calc(var(--default-element-padding) * 2);
+  padding: var(--default-element-padding) calc(var(--default-element-padding) * 2);
   background-color: var(--default-primary-color);
   border-radius: var(--border-radius-sm);
   color: var(--text-primary-color);
@@ -11,4 +10,15 @@ button:disabled {
 }
 button.accent {
   background-color: var(--accent-color);
+}
+button.close {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  border: 1px solid #111;
 }

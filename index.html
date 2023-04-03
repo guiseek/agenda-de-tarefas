@@ -21,6 +21,14 @@
 
         <!-- Lista de tarefas -->
 
+        <section></section>
+
+        <template id="task-item">
+          <!-- <h3></h3>
+          <p></p>
+          <time></time> -->
+        </template>
+
         <!-- Fim da lista de tarefas -->
       </nav>
       <aside>
@@ -52,7 +60,13 @@
             </section>
             <section>
               <label for="date">Data</label>
-              <input id="date" type="date" name="date" onclick="this.showPicker()" required />
+              <input
+                id="date"
+                type="date"
+                name="date"
+                onclick="this.showPicker()"
+                required
+              />
               <output>Obrigatório</output>
             </section>
             <section>
@@ -80,8 +94,22 @@
     <dialog>
       <header>
         <h2>Instruções</h2>
-        <button onclick="document.querySelector('dialog').close('false')">
-          x
+        <button
+          class="close"
+          onclick="document.querySelector('dialog').close('false')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 0 24 24"
+            width="24px"
+            fill="#000000"
+          >
+            <path d="M0 0h24v24H0V0z" fill="none" />
+            <path
+              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"
+            />
+          </svg>
         </button>
       </header>
       <section>
@@ -90,39 +118,73 @@
         dias usando o calendário, permitindo listar apenas as tarefas do dia
         selecionado.
 
-        <h3>Armazenar</h3>
         <ol>
           <li>
-            Durante o evento de submissão do formulário, modifique a função
-            <code>setTasks</code> para que seja possível armazenar os dados da
-            tarefa submetidospelo formulário usando <code>localStorage</code>.
+            <p>
+              Na função <code>getTasksByDate</code>, no arquivo
+              <code>get-tasks-by-date.ts</code>, atribua para
+              <code>const tasks</code> a lista retornada com
+              <code>localStorage</code>
+              usando a data (<code>date</code>) como chave.
+            </p>
           </li>
-        </ol>
+          <li>
+            <p>
+              Na função <code>setTasksByDate</code>, no arquivo
+              <code>set-tasks-by-date.ts</code>, adicione a nova tarefa como um
+              novo item do <code>Array</code> declarado como
+              <code>tasks</code> e atribuído com o retorno da função
+              <code>getTasksByDate</code>.
+            </p>
+            <p>
+              E então armazene a lista de tarefas atualizada usando
+              <code>localStorage</code> usando a data (<code>task.date</code>)
+              como chave.
+            </p>
+          </li>
+          <li>
+            <p>
+              No arquivo <code>index.html</code>, escolha tags HTML que
+              represente
+              <a
+                href="https://seek.surge.sh/posts/semantica-dos-elementos-html/"
+                target="_blank"
+                >semanticamente</a
+              >
+              as informações da interface <code>TaskEntity</code>.
+            </p>
 
-        <h3>Recuperar</h3>
-        <ol>
-          <li>
-            No HTML, crie um item para lista usando o elemento
-            <code>&lt;template&gt;</code>.
+            <!-- prettier-ignore -->
+            <pre>interface TaskItem {
+  subject: string   // Assunto
+  person: string    // Pessoa
+  date: string      // Data
+  terms: string     // Termos
+}</pre>
+            <p>
+              Pense em uma tag para cada propriedade da interface (a propriedade
+              <code>terms</code> não é obrigatória) e pode ficar de fora caso
+              queira. Adicione as tags escolhidas dentro do elemento
+              <code>&lt;template&gt;</code>
+              que já existe neste documento.
+            </p>
           </li>
           <li>
-            Durante o evento de seleção do calendário, encontre a função
-            <code>getTasks</code>, e modifique seu interior para recuperar os
-            dados usando <code>localStorage</code>.
-          </li>
-          <li>
-            Quando estiver recebendo a lista de tarefas como um
-            <code>Array</code>, percorra cada item e, usando
-            <code>template.content.cloneNode(true)</code>, clone um novo item,
-            modifique o texto interior e então adicione a lista no HTML.
+            No arquivo <code>main.ts</code>, use o laço de repetição
+            <code>tasks.forEach()</code>
+            para percorrer cada item da lista de tarefas, faça o clone um novo
+            item do template, preencha o texto interno dos elementos (tags)
+            escolhidos e em seguida, adicione o fragmento a lista de tarefas do
+            documento. Use <code>template.content.cloneNode(true)</code> para
+            clonar novos itens do template.
           </li>
         </ol>
 
         <h3>Dicas</h3>
         <p>
           Para esta missao, evite adicionar complexidades desnecessárias, não
-          recomendo o uso de <kbd>ctrl+c</kbd> e <kbd>ctrl+v</kbd> pois
-          o problema exige o acrescimo de poucas linhas de código, entenda o
+          recomendo o uso de <kbd>ctrl+c</kbd> e <kbd>ctrl+v</kbd> pois o
+          problema exige o acrescimo de poucas linhas de código, entenda o
           problema antes de codificar.
         </p>
         <p>
